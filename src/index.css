@@ -5,9 +5,270 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(87, 104, 151, 0.541);
+}
+
+.selectionPokemon {
+  position: relative;
+  color: rgb(45, 117, 27);
+  background-color: rgb(107, 162, 199);
+  border-radius: 5px;
+  width: 60vw;
+  left: 5vw;
+  text-align: center;
+}
+
+.fondo {
+  position: absolute;
+  width: 65vw;
+  height: 65vh;
+  z-index: 500;
+  left: 3vw;
+  border-width: 15px;
+  border-color: rgb(32, 79, 133);
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.deleteFondo {
+  position: absolute;
+  width: 65vw;
+  height: 65vh;
+  top: 10vh;
+  left: 3vw;
+  z-index: 950;
+  border-width: 15px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: rgb(32, 79, 133);
+}
+
+.loader {
+  position: absolute;
+  z-index: 999;
+  top: 40vh;
+  left: 32.5vw;
+  width: 5vw;
+  transform: rotate(-10deg);
+  animation: spin 2s linear infinite;
+
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.pokemon1 {
+  width: 29vh;
+  position: absolute;
+  top: 43vh;
+  left: 8vw;
+  z-index: 899;
+  cursor: pointer;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: brightness(5%);
+}
+
+.btnPokemon1 {
+  position: absolute;
+  background-color: rgba(206, 206, 206, 0);
+  width: 8vw;
+  height: 18vh;
+  z-index: 999;
+  cursor: pointer;
+  top: 48vh;
+  left: 11vw;
+  border-style: none;
+}
+
+.pokemon2 {
+  width: 29vh;
+  position: absolute;
+  top: 45.5vh;
+  left: 33vw;
+  z-index: 899;
+  cursor: pointer;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: brightness(5%);
+}
+
+.btnPokemon2 {
+  position: absolute;
+  background-color: rgba(206, 206, 206, 0);
+  width: 8vw;
+  height: 18vh;
+  z-index: 999;
+  cursor: pointer;
+  top: 48.5vh;
+  left: 35.5vw;
+  border-style: none;
+}
+
+.pokemon3 {
+  width: 28vh;
+  position: absolute;
+  top: 39.5vh;
+  left: 55vw;
+  z-index: 800;
+  cursor: pointer;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: brightness(5%);
+}
+
+.btnPokemon3 {
+  position: absolute;
+  background-color: rgba(206, 206, 206, 0);
+  width: 8vw;
+  height: 18vh;
+  z-index: 999;
+  cursor: pointer;
+  top: 42.5vh;
+  left: 57vw;
+  border-style: none;
+}
+
+.pokedex {
+  position: absolute;
+  width: 26vw;
+  height: 95vh;
+  left: 72vw;
+  top: 2.5vh;
+  z-index: 1;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0 0 0 4px;
+  filter: brightness(85%);
+}
+
+.screen {
+  position: absolute;
+  width: 19vw;
+  height: 32vh;
+  left: 73.5vw;
+  top: 30vh;
+  z-index: 500;
+  border-width: .3vw;
+  border-style: solid;
+  border-color: rgb(155, 184, 184);
+  border-radius: 4px;
+  background: rgb(26, 26, 75);
+}
+
+.textPokedex {
+  position: absolute;
+  width: 12vw;  
+  left: 77vw;
+  top: 42vh;
+  z-index: 900;
+}
+
+.pokedex1 {
+  position: absolute;
+  width: 27vh;
+  left: 77vw;
+  top: 33vh;
+  z-index: 100;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.pokedex2 {
+  position: absolute;
+  width: 30vh;
+  left: 77vw;
+  top: 31vh;
+  z-index: 100;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.pokedex3 {
+  position: absolute;
+  width: 30vh;
+  left: 77vw;
+  top: 31vh;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  z-index: 100;
+}
+
+.namePokemon {
+  position: absolute;
+  width: 13vw;
+  height: 6vh;
+  left: 77vw;
+  top: 65vh;
+  z-index: 950;
+  border-radius: 5px;
+  background-color: beige;
+  border-style: solid;
+  border-color: grey;
+}
+
+.pokedex1Text {
+  position: absolute;
+  width: 27vh;
+  left: 77vw;
+  top: 61vh;
+  z-index: 99;
+  color: grey;
+  text-align: center;
+}
+
+.pokedex2Text {
+  position: absolute;
+  width: 30vh;
+  left: 77vw;
+  top: 61vh;
+  z-index: 90;
+  color: grey;
+  text-align: center;
+}
+
+.pokedex3Text {
+  position: absolute;
+  width: 30vh;
+  left: 77vw;
+  top: 61vh;
+  z-index: 90;
+  color: grey;
+  text-align: center;
+}
+
+.reload {
+  position: absolute;
+  top: 85vh;
+  left: 30vw;
+  width: 15vw;
+  height: 10vh;
+  background-color: rgb(141, 34, 39);
+  border-style: none;
+  color: beige;
+  font-size: 1.2vw;
+  border-radius: 5px;
+}
+
+.reload:hover {
+  background-color: brown;
+  border-bottom-width: 2px;
+  border-color: bisque;
+  border-style: solid;
 }
